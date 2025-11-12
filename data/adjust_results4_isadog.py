@@ -88,12 +88,12 @@ def adjust_results4_isadog(results_dic, dogfile):
         pet_is_dog = 1 if pet_label in dognames_dic else 0
 
         # Check if classifier label is a dog
-        classifier_is_dog = 0
-        for name in dognames_dic:
-            if name in classifier_label:
+       classifier_is_dog = 0
+        for term in classifier_label.split(","):
+            term = term.strip()
+            if term in dognames_dic:
                 classifier_is_dog = 1
                 break
 
-        # Extend the results list with two new entries
         results_dic[key].extend([pet_is_dog, classifier_is_dog])
 
