@@ -96,6 +96,3 @@ def adjust_results4_isadog(results_dic, dogfile):
                 break
 
         results_dic[key].extend([pet_is_dog, classifier_is_dog])
-
-git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
